@@ -1,0 +1,9 @@
+/* Configurações Globais */
+
+
+*{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
