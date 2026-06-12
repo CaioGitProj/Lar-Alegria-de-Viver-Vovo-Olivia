@@ -1,5 +1,9 @@
 /* Configurações Globais */
 
+/* Comportamento de rolagem suave ao clicar no link #info */
+html {
+    scroll-behavior: smooth;
+}
 
 *{
     box-sizing: border-box;
@@ -113,4 +117,296 @@ nav a:hover{
 .botao_info:hover
 {
     background-color: crimson;
+}
+
+
+
+
+                /* A parte sobre a equipe e o estabelecimento */
+
+.secao_quem_somos 
+{
+    background-color: #ffece3;
+    padding: 60px 20px;
+    font-family: sans-serif;
+}
+
+.container_quem_somos 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.conteudo_esquerdo 
+{
+    flex: 1;
+    min-width: 320px;
+}
+
+.subtitulo_laranja 
+{
+    color: #c2843a;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.conteudo_esquerdo h2 
+{
+    color: #2d1a12;
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.conteudo_esquerdo p 
+{
+    color: #66554e;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.tags_container {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tag_status {
+    background-color: #ede6da;
+    color: #2d1a12;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.grid_cards_info {
+    flex: 1;
+    min-width: 320px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+.card_info {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.icone_card {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 15px;
+    color: #7d3121;
+}
+
+.card_info h3 {
+    color: #2d1a12;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card_info p {
+    color: #66554e;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+                /* Parte da diretoria*/
+.secao_diretoria {
+    background-color: #f4efe6;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.container_diretoria 
+{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.secao_diretoria h2 
+{
+    color: #2d1a12;
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+
+.data_gestao {
+    color: #66554e;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.grid_diretoria 
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card_membro 
+{
+    background-color: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar_letra 
+{
+    background-color: #7d3121;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cargo_membro 
+{
+    color: #c2843a;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.nome_membro 
+{
+    color: #2d1a12;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 600;
+    max-width: 200px;
+}
+
+
+                    /* Parte das informações */
+
+.secao_cta {
+    background-color: #fdfaf6; /* Tom creme do fundo */
+    text-align: center;
+    padding: 60px 20px;
+    font-family: 'Georgia', serif;
+}
+
+.secao_cta h2 {
+    color: #3a1e12;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.secao_cta p {
+    color: #7a6356;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+}
+
+.botao_ajudar {
+    display: inline-block;
+    background-color: #8a3c2d;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.botao_ajudar:hover {
+    background-color: #6e2f23;
+}
+
+
+/* 2. Estilização do Rodapé Escuro */
+footer {
+    background-color: #23130d;
+    color: #b5a499;
+    padding: 60px 20px 20px 20px;
+    font-family: sans-serif;
+}
+
+.footer_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex; 
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap; /* Garante que fique responsivo em telas menores */
+}
+
+.footer_coluna {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer_coluna h3 {
+    color: #ffffff;
+    font-family: 'Georgia', serif;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.footer_coluna p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer_coluna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_coluna ul li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* Alinhamento do endereço abaixo do ícone do mapa */
+.indent_endereco {
+    display: inline-block;
+    padding-left: 24px; 
+}
+
+/* Linha divisória fina */
+.footer_linha {
+    border: 0;
+    border-top: 1px solid #36221a;
+    margin: 40px 0 20px 0;
+}
+
+/* Texto de Copyright */
+.footer_copyright {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #857267;
 }
