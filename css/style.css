@@ -253,8 +253,22 @@ nav a:hover{
 .grid_diretoria 
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Força EXATAMENTE 3 colunas lado a lado */
     gap: 20px;
+}
+
+/* Quando a tela for menor que 900px (Tablets), caem para 2 colunas */
+@media (max-width: 900px) {
+    .grid_diretoria {
+        grid-template-columns: repeat(2, 1fr); /* Corrigido de 250px para 2 */
+    }
+}
+
+/* Quando a tela for menor que 600px (Celulares), fica 1 por linha para não esmagar */
+@media (max-width: 600px) {
+    .grid_diretoria {
+        grid-template-columns: 1fr; 
+    }
 }
 
 .card_membro 
@@ -299,7 +313,13 @@ nav a:hover{
     line-height: 1.4;
     margin: 0;
     font-weight: 600;
+    height: 200px;
+    padding: 20px;
     max-width: 200px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    justify-content: space-between;
 }
 
 
@@ -409,4 +429,187 @@ footer {
     text-align: center;
     font-size: 0.85rem;
     color: #857267;
+}
+
+
+
+                        /* Parte do pix */ 
+
+
+.donation-section {
+    background-color: #8b3a2f; 
+    color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+    max-width: 1100px; 
+    width: 90%; 
+    margin: 60px auto;
+    box-sizing: border-box;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.donation-section * {
+    box-sizing: border-box;
+}
+
+.donation-section .left-col, 
+.donation-section .right-col {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* --- LADO ESQUERDO: Textos e Chave --- */
+.donation-section .subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #e0c2bf;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.donation-section h2 {
+    font-size: 2.8rem;
+    margin: 0 0 16px 0;
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.2;
+    color: #ffffff;
+}
+
+.donation-section p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #f0e6e5;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+/* Caixa do Copia e Cola */
+.donation-section .copy-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 12px 12px 24px;
+    border: 1px solid rgba(255,255,255, 0.2);
+}
+
+.donation-section .pix-key {
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.donation-section .btn-copy {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.donation-section .btn-copy:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+.donation-section .btn-copy svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.donation-section h3 {
+    font-size: 1.3rem;
+    margin: 0 0 20px 0;
+    color: #f0e6e5;
+    font-weight: bold;
+    text-align: left;
+}
+
+.donation-section .bank-data-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 10px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.donation-section .data-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1rem;
+}
+
+.donation-section .data-row:last-child {
+    border-bottom: none;
+}
+
+.donation-section .data-label {
+    color: #d8b8b5;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.donation-section .data-value {
+    font-weight: 600;
+    text-align: right;
+    color: #ffffff;
+    flex-grow: 1;
+    word-break: break-word;
+}
+
+.donation-section .disclaimer {
+    font-size: 0.85rem;
+    color: #d8b8b5;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* --- RESPONSIVIDADE (Celulares) --- */
+@media (max-width: 768px) {
+    .donation-section {
+        padding: 30px 20px;
+        gap: 40px;
+    }
+    .donation-section h2 {
+        font-size: 2.2rem;
+    }
+    .donation-section .copy-box {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .donation-section .btn-copy {
+        width: 100%;
+        justify-content: center;
+    }
+    .donation-section .data-row {
+        flex-direction: column;
+        gap: 6px;
+    }
+    .donation-section .data-value {
+        text-align: left;
+    }
 }
